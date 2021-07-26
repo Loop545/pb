@@ -1,7 +1,7 @@
 import './App.css';
 
 //components
-import Blogs from './components/Blog'
+// import Blogs from './components/Blog'
 import Comingsoon from './components/Comingsoon';
 import { Component } from 'react';
 
