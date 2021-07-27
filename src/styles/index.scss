@@ -1,0 +1,18 @@
+// External
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,700&display=swap");
+
+// Background Colours
+$body-bg: #ffffff;
+
+// Colors
+$black: #3b3c43;
+$white: #ffffff;
+$blue: #336699;
+$grey: #c0c0c0;
+
+// Fonts
+$font_family: "Source Sans Pro", sans-serif;
+$font_regular: 400 1rem $font_family;
+$font_light: 300 1rem $font_family;
+$font_bold: 700 1rem $font_family;
+$font: $font_regular;
