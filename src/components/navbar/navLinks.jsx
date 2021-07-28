@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/index.scss';
-import Socail from './social';
+
+//import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Link } from 'raviger';
+//components
+import Home from '../../pages/Home';
+import About from '../../pages/About';
+import Scribble from '../../pages/Scribble';
+import Connect from '../../pages/Connect';
 
 
 const NavLinksContainer = styled.div`
     height: 100%;
     display: flex;
+    position: sticky;
     align-items: center;
 `;
 
@@ -31,27 +39,50 @@ const LinkItem = styled.li`
     display: flex;
 `;
 
-const Link = styled.a`
-    text-decoration: none;
-    color: inherit;
-    font-size: inherit;
-    border-bottom: 2px solid transparent;
-    transition: all 220ms ease-in-out;
-    padding-bottom: 0.2rem;
+// const Link = styled.a`
+//     text-decoration: none;
+//     color: inherit;
+//     font-size: inherit;
+//     border-bottom: 2px solid transparent;
+//     transition: all 220ms ease-in-out;
+//     padding-bottom: 0.2rem;
 
-    &:hover {
-        border-bottom: 2px solid #336699;
-    }
-`;
+//     &:hover {
+//         border-bottom: 2px solid #336699;
+//     }
+// `;
 
 const  Navlinks= (props) => {
     return <NavLinksContainer>
-        <LinksWrapper>
-            <LinkItem><Link href='#'>Home</Link></LinkItem>
-            <LinkItem><Link href='#'>Scribble</Link></LinkItem>
-            <LinkItem><Link href='#'>About</Link></LinkItem>
-            <LinkItem><Link href='#'>Connect</Link></LinkItem>
-        </LinksWrapper>
-    </NavLinksContainer>
+                <LinksWrapper>
+                    <LinkItem><Link className='link' href='/home'>Home</Link></LinkItem>
+                    <LinkItem><Link className='link' href='/scribble'>Scribbles</Link></LinkItem>
+                    <LinkItem><Link className='link' href='/about'>About</Link></LinkItem>
+                    <LinkItem><Link className='link' href='connect'>Connect</Link></LinkItem>
+                </LinksWrapper>
+            </NavLinksContainer>
+            {/* 
+                <Router>
+                <Switch>
+             <Route path='/' exact>
+                 <Home />
+             </Route>
+            </Switch>
+            <Switch>
+             <Route path='/scribble'>
+                 <Scribble/>
+             </Route>
+            </Switch>
+            <Switch>
+             <Route path='/about'>
+                 <About/>
+             </Route>
+            </Switch>
+            <Switch>
+             <Route path='/connect'>
+                 <Connect/>
+             </Route>
+            </Switch>
+        </Router> */}
 }
 export default Navlinks;

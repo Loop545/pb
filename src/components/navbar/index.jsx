@@ -10,10 +10,11 @@ import Socail  from './social';
 const NavbarContainer = styled.div`
     width: 100%;
     height: 60px;
-    // box-shadow: 0 1px 3px rgb(15 15 15 / 43%);
+    box-shadow: 0 1px 3px rgb(15 15 15 / 23%);
     display: flex;
     align-items: center;
-    padding: 0 1.5em;
+    padding: 3rem 1rem;
+    
 `;
 const LeftSection = styled.div`
     display:flex;

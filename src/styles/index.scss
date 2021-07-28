@@ -16,3 +16,22 @@ $font_regular: 400 1rem $font_family;
 $font_light: 300 1rem $font_family;
 $font_bold: 700 1rem $font_family;
 $font: $font_regular;
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+  border-bottom: 2px solid transparent;
+  transition: all 220ms ease-in-out;
+  padding-bottom: 0.2rem;
+  background-color: white;
+
+  &:hover {
+    border-bottom: 2px solid #336699;
+  }
+  @media screen and (max-width: 768px) {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+}

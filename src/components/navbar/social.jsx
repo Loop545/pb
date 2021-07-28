@@ -5,22 +5,27 @@ import { AiFillInstagram, AiFillTwitterSquare, AiFillFacebook } from 'react-icon
 const SocailLinksContainer = styled.div`
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: center;s
     @media (max-width: 768px) {
-        height:0;
+        height:3rem;
+        width: 100%;
         display: flex;
         align-items: center;
+        backgrounnd-color: white;
     }
 `;
 const SocailLinksWrapper = styled.div`
     padding: 0;
     display: flex;
     height: 100%;
+    backgrounnd-color: white;
     list-style: none;
     margin-top: 2.8rem;
+    background-color: white;
     @media (max-width: 768px) {
         padding: 0;
         display: flex;
+        background-color: white;
         list-style: none;
         margin:0;
     }
@@ -39,8 +44,11 @@ padding: 2px 8px;
   @media (max-width: 768px) {
         transition: 0.3s ease;
         color: #3b3c43;
+        backgrounnd-color: white;
+        width: 100%;
+        height: 3rem;
         border-radius: 30px;
-        padding: 2px 7px;
+        padding: 6px 9px;
         &:hover {
             background-color: #336699;
             transform: scale(1.2);
