@@ -1,0 +1,13 @@
+{
+    "parser": "babel",
+    "tabWidth": 2,
+    "useTabs": true,
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+}
+  
