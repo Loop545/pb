@@ -4,3 +4,6 @@ html {
   box-sizing: border-box;
   margin: 0 auto;
 }
+body {
+  background-image: url(./static/graphics/background.png);
+}

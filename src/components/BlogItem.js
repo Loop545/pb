@@ -40,7 +40,7 @@ export class BlogItem extends Component {
                     <small>Review by <strong>{ author }</strong></small>
                     <img style={{width: '50%'}} src={ imgUrl } alt={title.rendered} />
                     <div dangerouslySetInnerHTML ={{ __html: excerpt.rendered }} />
-                    <Link to={`/blog/${id}`}>Read More</Link>
+                    {/* <Link to={`/blog/${id}`}>Read More</Link> */}
                     < hr />
                 </div>
             );

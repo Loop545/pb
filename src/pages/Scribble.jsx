@@ -1,20 +1,35 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
+import axios from 'axios'
+import BlogItem from '../components/BlogItem'
 
 import './Scribble.scss'
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Blogs from '../components/Blog'
-import BlogPage from '../components/Blogpage'
-import Poems from '../components/Poem'
-import PoemPage from '../components/Poempage'
+export class Scribble extends Component{
 
-const Scribble = () => {
-    return (
-        <div className='scribble-container'>
-            <h1>Daily Updates</h1>
-
-            
-        </div>  
-    )
+    state = {
+        blogs: [],
+        isLoaded: false
+    }
+    componentDidMount() {
+        axios.get('/wp-json/wp/v2/blog')
+        .then(res => this.setState({
+            blogs: res.data,
+            isLoaded: true
+        }))
+        .catch(err => console.log(err));
+    }
+    render() {
+        const { blogs,  isLoaded } = this.state;
+        if(isLoaded) {
+            return (
+                <div>
+                   {blogs.map(blog => (
+                       <BlogItem key={blog.id}blog={blog} />
+                   ))} 
+                </div>
+            );
+        }
+        return <h3>Loading...</h3>
+    }
 }
 export default Scribble;

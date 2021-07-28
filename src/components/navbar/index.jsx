@@ -14,6 +14,7 @@ const NavbarContainer = styled.div`
     display: flex;
     align-items: center;
     padding: 3rem 1rem;
+    background-color: white;
     
 `;
 const LeftSection = styled.div`
