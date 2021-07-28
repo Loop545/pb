@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
-import BlogItem from './BlogItem'
+import PoemItem from './PoemItem'
 import axios from 'axios'
 
 
-export class Blog extends Component {
+export class Poem extends Component {
     state = {
-        blogs: [],
+        poems: [],
         isLoaded: false
     }
     componentDidMount() {
-        axios.get('/wp-json/wp/v2/blog')
+        axios.get('/wp-json/wp/v2/poem')
         .then(res => this.setState({
-            blogs: res.data,
+            poems: res.data,
             isLoaded: true
         }))
         .catch(err => console.log(err));
     }
     render() {
-        const { blogs,  isLoaded } = this.state;
+        const { poems,  isLoaded } = this.state;
         if(isLoaded) {
             return (
                 <div>
-                   {blogs.map(blog => (
-                       <BlogItem key={blog.id}blog={blog} />
+                   {poems.map(poem => (
+                       <PoemItem key={poem.id}blog={poem} />
                    ))} 
                 </div>
             );
@@ -31,4 +31,4 @@ export class Blog extends Component {
     }
 }
 
-export default Blog;
+export default Poem;

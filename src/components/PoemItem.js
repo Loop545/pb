@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 
-export class BlogItem extends Component {
+export class PoemItem extends Component {
 
     state ={
         imgUrl: '',
@@ -12,11 +12,11 @@ export class BlogItem extends Component {
     }
 
     static propTypes ={
-       blog: PropTypes.object.isRequired 
+       poem: PropTypes.object.isRequired 
     }
 
     componentDidMount() {
-        const { featured_media, author} = this.props.blog;
+        const { featured_media, author} = this.props.poem;
         const getImageUrl = axios.get(`/wp-json/wp/v2/media/${featured_media}`)
         const getAuthor = axios.get(`/wp-json/wp/v2/users/${author}`)
 
@@ -31,7 +31,7 @@ export class BlogItem extends Component {
     }
 
     render() {
-        const { id, title, excerpt} = this.props.blog;
+        const { id, title, excerpt} = this.props.poem;
         const { author, imgUrl, isLoaded} = this.state;
         if(isLoaded) {
             return (
@@ -40,7 +40,7 @@ export class BlogItem extends Component {
                     <small>Review by <strong>{ author }</strong></small>
                     <img style={{width: '50%'}} src={ imgUrl } alt={title.rendered} />
                     <div dangerouslySetInnerHTML ={{ __html: excerpt.rendered }} />
-                    <Link to={`/blog/${id}`}>Read More</Link>
+                    <Link to={`/poem/${id}`}>Read More</Link>
                     < hr />
                 </div>
             );
@@ -49,4 +49,4 @@ export class BlogItem extends Component {
     }
 }
 
-export default BlogItem
+export default PoemItem
