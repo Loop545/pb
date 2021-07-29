@@ -10,7 +10,7 @@ export class PoemItem extends Component {
         author: '',
         isLoaded:false
     }
-
+    
     static propTypes ={
        poem: PropTypes.object.isRequired 
     }
@@ -40,7 +40,7 @@ export class PoemItem extends Component {
                     <small>Review by <strong>{ author }</strong></small>
                     <img style={{width: '50%'}} src={ imgUrl } alt={title.rendered} />
                     <div dangerouslySetInnerHTML ={{ __html: excerpt.rendered }} />
-                    <Link to={`/poem/${id}`}>Read More</Link>
+                    {/* <Link to={`/blog/${id}`}>Read More</Link> */}
                     < hr />
                 </div>
             );
