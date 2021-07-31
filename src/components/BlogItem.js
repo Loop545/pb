@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import './BlogItem.scss'
 
 export class BlogItem extends Component {
 
@@ -35,8 +36,8 @@ export class BlogItem extends Component {
         const { author, imgUrl, isLoaded} = this.state;
         if(isLoaded) {
             return (
-                <div>
-                    <h2 style={{marginBottom: '0'}}>{ title.rendered }</h2>
+                <div classname='blog-card'>
+                    <h2  classname='title' style={{marginBottom: '0'}}>{ title.rendered }</h2>
                     <small>Review by <strong>{ author }</strong></small>
                     <img style={{width: '50%'}} src={ imgUrl } alt={title.rendered} />
                     <div dangerouslySetInnerHTML ={{ __html: excerpt.rendered }} />

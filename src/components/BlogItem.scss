@@ -1,0 +1,11 @@
+@import '../styles/index.scss';
+
+.blog-card{
+    padding: 2rem;
+    background-color: $grey;
+}
+
+.blog-card .title {
+    font: $font_bold;
+
+}

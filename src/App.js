@@ -1,6 +1,6 @@
 import React, { Component, Fragment} from 'react';
 //import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import { useRoutes } from 'raviger';
 import RouteConfig from '../src/components/navbar/routes';
 //components
@@ -9,7 +9,8 @@ import RouteConfig from '../src/components/navbar/routes';
 // import Poems from './components/Poem'
 // import PoemPage from './components/Poempage'
 
-import { Navbar } from './components/navbar/index'
+//import { Navbar } from './components/navbar/index'
+import Header from '../src/components/header/Header'
 
 
 
@@ -24,7 +25,8 @@ const App  =() => {
          </Fragment>
       </Router> */}
       
-      <Navbar/>
+      {/* <Navbar/> */}
+      <Header />
       {Routes}
       </div>
       

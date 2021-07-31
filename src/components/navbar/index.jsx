@@ -19,12 +19,12 @@ const NavbarContainer = styled.div`
 `;
 const LeftSection = styled.div`
     display:flex;
+    justify-content: center;
 `;
 
 const MiddleSection = styled.div`
     display:flex;   
     flex: 2;
-    height: 100%;
     justify-content: center;
 `;
 
@@ -32,7 +32,7 @@ const RightSection = styled.div`
     display:flex;
 `;
 
-export function Navbar(props) {
+function Navbar(props) {
     const isMobile = useMediaQuery({maxWidth: DeviceSize.mobile})
     return (
         <NavbarContainer>
@@ -47,3 +47,4 @@ export function Navbar(props) {
     </NavbarContainer>
     );
 }
+export default Navbar;

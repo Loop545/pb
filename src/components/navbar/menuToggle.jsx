@@ -7,6 +7,7 @@ const Button = styled.div`
   margin-top: 1.7rem;
   z-index: 99;
   cursor: pointer;
+  color: #2E1114;
 `;
 
 const Path = (props) => (

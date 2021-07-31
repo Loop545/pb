@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { AiFillInstagram, AiFillTwitterSquare, AiFillFacebook } from 'react-icons/ai';
 
 const SocailLinksContainer = styled.div`
-    height: 100%;
     display: flex;
     align-items: center;s
     @media (max-width: 768px) {
@@ -11,46 +10,38 @@ const SocailLinksContainer = styled.div`
         width: 100%;
         display: flex;
         align-items: center;
-        backgrounnd-color: white;
     }
 `;
 const SocailLinksWrapper = styled.div`
     padding: 0;
     display: flex;
-    height: 100%;
-    backgrounnd-color: white;
     list-style: none;
-    margin-top: 2.8rem;
-    background-color: white;
+    margin-top: 0.8rem;
     @media (max-width: 768px) {
         padding: 0;
         display: flex;
-        background-color: white;
         list-style: none;
         margin:0;
     }
 `;
 export const SocialIcons = styled.a`
 transition: 0.3s ease;
-color: #3b3c43;
+color: #501B1D;
 border-radius: 10px;
 padding: 2px 8px;
 &:hover {
-    background-color: #336699;
     transform: scale(1.2);
     cursor: pointer;
     
   }
   @media (max-width: 768px) {
         transition: 0.3s ease;
-        color: #3b3c43;
-        backgrounnd-color: white;
+        color: #501B1D;
         width: 100%;
         height: 3rem;
         border-radius: 30px;
         padding: 6px 9px;
         &:hover {
-            background-color: #336699;
             transform: scale(1.2);
             cursor: pointer;
             

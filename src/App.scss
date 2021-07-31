@@ -1,8 +1,10 @@
+@import '../src/styles/index.scss';
 *,
 body,
 html {
   box-sizing: border-box;
   margin: 0 auto;
+  font: $font_regular;
 }
 body {
   background-image: url(./static/graphics/background.png);

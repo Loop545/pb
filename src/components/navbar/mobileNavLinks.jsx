@@ -46,6 +46,13 @@ const LinkItem = styled.li`
   margin-bottom: 10px;
 `;
 
+const Text = styled.h1`
+  color:#501B1D;
+  font-size: 20px;
+  padding: 2rem;
+  margin-top: 1rem;
+`;
+
 // const Link = styled.a`
 //   text-decoration: none;
 //   color: inherit;
@@ -54,6 +61,7 @@ const LinkItem = styled.li`
 
 const Marginer = styled.div`
   height: 2em;
+  
 `;
 
 export function MobileNavLinks(props) {
@@ -61,6 +69,7 @@ export function MobileNavLinks(props) {
 
   return (
       <NavLinksContainer>
+        <Text>Menu</Text>
         <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
         {isOpen && (
           <LinksWrapper>
