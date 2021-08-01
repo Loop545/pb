@@ -9,7 +9,7 @@ import RouteConfig from '../src/components/navbar/routes';
 // import Poems from './components/Poem'
 // import PoemPage from './components/Poempage'
 
-//import { Navbar } from './components/navbar/index'
+import Footer from '../src/components/footer/footer'
 import Header from '../src/components/header/Header'
 
 
@@ -28,6 +28,7 @@ const App  =() => {
       {/* <Navbar/> */}
       <Header />
       {Routes}
+      <Footer />
       </div>
       
     );

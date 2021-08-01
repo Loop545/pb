@@ -4,11 +4,7 @@ import '../../styles/index.scss';
 
 //import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Link } from 'raviger';
-//components
-import Home from '../../pages/Home';
-import About from '../../pages/About';
-import Scribble from '../../pages/Scribble';
-import Connect from '../../pages/Connect';
+
 
 
 const NavLinksContainer = styled.div`
@@ -30,7 +26,7 @@ const LinkItem = styled.li`
     margin-top: 1.6rem;
     padding: 0 1.1em;
     height: 100%;
-    color: #3b3c43;
+    color: white;
     font: $font_regular;
     font-weight: 500;
     font-size: 16px;

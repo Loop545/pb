@@ -4,16 +4,16 @@ import Img from '../static/img/about.jpg';
 import { Link } from 'raviger';
 
 import './Home.scss'
-import Wave from '../static/graphics/wave.svg'
+// import Wave from '../static/graphics/wave.svg'
 import FeaturedPost from '../components/featuredpost/FeaturedPost';
 
 const Home = () => {
     return (
         
         <div className='home-container'>
-            <div className='wave' >
+            {/* <div className='wave' >
                 <img src={Wave} alt='waves'/>
-            </div> 
+            </div>  */}
             <div className='divider' />
                 <h1>About Author</h1>
                 <div className='about-content'>

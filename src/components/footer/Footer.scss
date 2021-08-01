@@ -1,0 +1,70 @@
+@import '../../styles/index.scss';
+
+.footer-container {
+    width: 100%;
+    height: 300px;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: $maroon2;
+    color: $white;
+}
+.footer-container .legal {
+    padding: 2rem;
+    border-bottom: 1px solid $white;
+    margin-bottom: 0.5rem;
+    position: relative;
+    top:130px;
+    
+    .legal-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        li{
+            margin: 0.2rem 0.6rem;
+            white-space: nowrap;
+            list-style: none;
+            
+            a{
+                text-decoration: none;
+                color: white;
+                font: $font_regular;
+                
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        li:nth-last-child(2) {
+            flex:1;
+        }
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .footer-container .legal {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+        .legal-list {
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+}
+.footer-container .social-container {
+    width: 30%;
+    display: flex;
+    position: fixed;
+    bottom: 7px;
+    left: 35%;
+
+    .icons {
+        color: $white;
+        display: flex;
+        .icons:hover {
+            transform: scale(1.3);
+        }
+    }
+}
