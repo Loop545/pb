@@ -1,11 +1,24 @@
 @import '../styles/index.scss';
 
-.blog-card{
-    padding: 2rem;
+
+.blog-container .blog-card{
     background-color: $grey;
 }
 
 .blog-card .title {
     font: $font_bold;
 
+}
+.blog-card .blog-flexbox {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    overflow: scroll;
+
+    .blog-img {
+        width: 100%;
+    }
+    .blog-text {
+        height: 20px;
+    }
 }

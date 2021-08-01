@@ -36,11 +36,15 @@ export class BlogItem extends Component {
         const { author, imgUrl, isLoaded} = this.state;
         if(isLoaded) {
             return (
-                <div classname='blog-card'>
-                    <h2  classname='title' style={{marginBottom: '0'}}>{ title.rendered }</h2>
+                <div classname='blog-card' style={{padding: '1rem'}}>
+                    <h2  classname='title' style={{marginBottom: '10px'}}>{ title.rendered }</h2>
+                    <div className='blog-flexbox'>
+                        <img className='blog-img' style={{width: '30%'}} src={ imgUrl } alt={title.rendered} />
+                        <br/>
+                        <div  className='blog-text' dangerouslySetInnerHTML ={{ __html: excerpt.rendered }} />
+
+                    </div>
                     <small>Review by <strong>{ author }</strong></small>
-                    <img style={{width: '50%'}} src={ imgUrl } alt={title.rendered} />
-                    <div dangerouslySetInnerHTML ={{ __html: excerpt.rendered }} />
                     {/* <Link to={`/blog/${id}`}>Read More</Link> */}
                     < hr />
                 </div>

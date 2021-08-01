@@ -1,6 +1,18 @@
+@import '../styles/index.scss';
+@import '../components/BlogItem.scss';
+
 .blog-container {
-    padding: 3rem;
+    padding: 6rem;
     height: 100%;
     margin: 0 auto;
-    margin-top: 2rem;
+      
+    h1 {
+        font: $font_bold;
+        font-size: 2rem;
+        color: $blue;
+        margin-bottom: 1rem;
+    }
+}
+.blog-container .blog-card{
+    background-color: $grey;
 }
