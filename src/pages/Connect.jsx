@@ -58,15 +58,16 @@ class Connect extends Component{
     render()  {
         const { yourName, yourEmail, subject, message, successMessage} = this.state
         return (
+            <>
                 <form onSubmit={this.onFormSubmit} style={{ margin: '20px'}}>
                     <label className='form-group'>
                     Name:
                     <input 
-                    type='text'
-                    className="form-control"
-                    name='yourName'
-                    value={yourName}
-                    onChange={this.handleOnChange}
+                        type='text'
+                        className="form-control"
+                        name='yourName'
+                        value={yourName}
+                        onChange={this.handleOnChange}
                     ></input>
                     </label>
                     <br />
@@ -107,6 +108,7 @@ class Connect extends Component{
                         <button type='submit' className='button-primary'>Login</button>
                         <h1>{successMessage}</h1>                
                     </form>
+            </>
         )
     }
 }
