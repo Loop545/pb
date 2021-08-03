@@ -47,7 +47,7 @@ const LinkItem = styled.li`
 `;
 
 const Text = styled.h1`
-  color: white;
+  color: black;
   font-size: 20px;
   padding: 2rem;
   margin-top: 1rem;

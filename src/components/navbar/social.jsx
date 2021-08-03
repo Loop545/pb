@@ -26,7 +26,7 @@ const SocailLinksWrapper = styled.div`
 `;
 export const SocialIcons = styled.a`
 transition: 0.3s ease;
-color: white;
+color: black;
 border-radius: 10px;
 padding: 2px 8px;
 &:hover {

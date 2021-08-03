@@ -13,22 +13,25 @@
   font-size: 3rem;
 }
 .home-container .about-content {
-  display: flex;
+  display: block;
   margin-top: 2rem;
   padding: 0;
   justify-content: space-between;
 }
 
-.home-container .about-content img {
-  width: 400px;
-  height: 300px;
-  margin-right: 2rem;
-  display: flex;
+.home-container img {
+  width: 80%;
+  height: 600px;
+  margin: 0 auto;
+  padding-top: 2rem;
 }
-.home-container .about-content p {
+.home-container .about-content .content p {
   font: $font_regular;
   color: $black;
   display: flex;
+  justify-content: center;
+  font-size: 18px;
+  text-align:justify;
 }
 .about-content .content {
   //height: 100%;
@@ -37,7 +40,8 @@
   button {
     width: 120px;
     height: 40px;
-    background-color: $black;
+    background-color: $button1;
+    border: none;
     border-radius: 0.5rem;
     color: $white;
     font: $font_regular;
@@ -58,41 +62,63 @@
   border-radius: 1rem;
   margin: 4rem 0rem 0rem 0rem;
 }
+.divider {
+  border: 1px solid $black;
+  width: 90px;
+  height: 8px;
+  background-color: $black;
+  border-radius: 1rem;
+  margin-left: 6rem;
+  margin-top: 5rem;
+}
+.featured-post {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  margin-bottom: 3rem;
+}
+h1 {
+  font: $font_regular;
+  color: $maroon2;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+ .wave{
+  height: 300px;
+  width: 100%;
+  background-color: $b2;
+  margin: 0;
+  padding: 0;
+}
+
 @media screen and (max-width: 768px) {
   .home-container {
     //background-color: rgb(66, 66, 91);
     padding: 3rem;
     height: 100%;
     margin: 0 auto;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   .home-container h1 {
     font: $font_regular;
     color: $maroon2;
     font-size: 2rem;
   }
-  .home-container .about-content {
-    display: flex;
-    margin-top: 2rem;
-    padding: 0;
-    justify-content: space-between;
-  }
   .home-container .divider {
     border: 1px solid $black;
-    width: 90px;
+    width: 70px;
     height: 7px;
     background-color: $black;
     border-radius: 1rem;
-    margin: 0.5rem 0;
+    margin: 2rem 0 0 0;
   }
   .home-container .about-content {
     display: flex;
-    margin-top: 2rem;
+    margin-top: 1rem;
     flex-direction: column;
     padding: 0;
     justify-content: space-between;
   }
-  .home-container .about-content img {
+  .home-container img {
     width: 400px;
     height: 300px;
     margin: 0 auto;

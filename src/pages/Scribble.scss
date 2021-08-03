@@ -12,7 +12,19 @@
         color: $blue;
         margin-bottom: 1rem;
     }
+    h2 {
+        font: $font_bold;
+        font-size: 2rem;
+        color: $maroon;
+        margin-bottom: 1rem;
+    }
 }
 .blog-container .blog-card{
-    background-color: $grey;
+    background-color: $grey !important;
+    padding: 1rem;
+    background: grey;
+    border: 1px solid;
+    border-radius: 1rem;
+    box-shadow: rbga (10,10,10,0.5);
 }
+
