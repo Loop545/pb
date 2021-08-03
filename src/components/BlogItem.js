@@ -48,7 +48,7 @@ export class BlogItem extends Component {
                     <div className='blog-flexbox' style={{
                         display: 'flex',
                         justifyContent: 'space-between',
-                    }}>
+                        }}>
                         <img className='blog-img' style={{width: '20%'}} src={ imgUrl } alt={title.rendered} />
                         <br/>
                         <div  className='blog-text' style={{
@@ -57,12 +57,11 @@ export class BlogItem extends Component {
 
                             }} dangerouslySetInnerHTML ={{ __html: excerpt.rendered }} 
                         />
-                        
-                        <button className='blog-button'><Link href={`/blog/${id}`}>Read More</Link></button>
                     </div>
                     <div style={{marginTop: '2rem'}} >
                         <small>Review by: <strong style={{textTransform: 'capitalize'}}>{ author }</strong></small>
                     </div>
+                    <a className='blog-button'><Link className='a-text' href={`/blog/${id}`}>Read More</Link></a>
                 </div>
             );
         } 
