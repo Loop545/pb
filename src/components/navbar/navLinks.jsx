@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../../styles/index.scss';
-
+import './Link.scss'
+import { FiChevronsDown} from 'react-icons/fi'
 //import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Link } from 'raviger';
 
@@ -52,7 +53,21 @@ const  Navlinks= (props) => {
     return <NavLinksContainer>
                 <LinksWrapper>
                     <LinkItem><Link className='link' href='/home'>Home</Link></LinkItem>
-                    <LinkItem><Link className='link' href='/scribble'>Scribbles</Link></LinkItem>
+                    <div className='dropdown'>
+                        <button className='dropbtn'>
+                            Scribbles
+                            <FiChevronsDown size='1rem'/>
+                        </button>
+                            <div className='dropdown-content'>
+                            <LinkItem>
+                            <Link className='link' href="/blog">Blog</Link>
+                            </LinkItem>
+                            <LinkItem>
+                            <Link className='link' href="/poem">Poem</Link>
+                            </LinkItem>
+                            </div>
+                        
+                    </div> 
                     <LinkItem><Link className='link' href='/about'>About</Link></LinkItem>
                     <LinkItem><Link className='link' href='connect'>Connect</Link></LinkItem>
                 </LinksWrapper>

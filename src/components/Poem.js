@@ -9,7 +9,7 @@ export class Poem extends Component {
         isLoaded: false
     }
     componentDidMount() {
-        axios.get('/wp-json/wp/v2/poem')
+        axios.get('/wp-json/wp/v2/poems')
         .then(res => this.setState({
             poems: res.data,
             isLoaded: true
@@ -22,7 +22,7 @@ export class Poem extends Component {
             return (
                 <div>
                    {poems.map(poem => (
-                       <PoemItem key={poem.id}blog={poem} />
+                       <PoemItem key={poem.id} poem={poem} />
                    ))} 
                 </div>
             );

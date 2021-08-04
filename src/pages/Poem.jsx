@@ -1,20 +1,18 @@
 import React, { Component } from 'react'
 
-import Blog from '../components/Blog'
 import Poem from '../components/Poem'
 
-import './Scribble.scss'
+import './Poem.scss'
 
-const Scribble = () => {
+const Poems = () => {
     return (
-        <div className='blog-container'>
-            <h1>Blogs</h1>
-            <Blog />
-            {/* <Poem /> */}
+        <div className='poem-container'>
+            <h1>Poems</h1>
+            <Poem />
         </div>
     );
 }
-export default Scribble;
+export default Poems;
 
 
 // import axios from 'axios'

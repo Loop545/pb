@@ -4,7 +4,9 @@ import { Link } from 'raviger';
 
 import './FeaturedPost.scss'
 
+
 export class FeaturedPost extends Component {
+
     state = {
         specials: [],
         isLoaded: false
@@ -19,7 +21,7 @@ export class FeaturedPost extends Component {
     }
     render() {
         console.log(this.setState)
-        const { specials, isLoaded } = this.state;
+        const { id,specials, isLoaded } = this.state;
         if(isLoaded) {
             return (
                 <div className='featured-post-container'>

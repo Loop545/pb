@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import { Link } from 'raviger';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import './BlogItem.scss'
 
-export class BlogItem extends Component {
 
+export class BlogItem extends Component {
+    
     state ={
         imgUrl: '',
         author: '',
@@ -20,6 +21,7 @@ export class BlogItem extends Component {
         const { featured_media, author} = this.props.blog;
         const getImageUrl = axios.get(`/wp-json/wp/v2/media/${featured_media}`)
         const getAuthor = axios.get(`/wp-json/wp/v2/users/${author}`)
+        
 
         Promise.all([getImageUrl,getAuthor]).then(res => {
             console.log(res);
@@ -32,14 +34,14 @@ export class BlogItem extends Component {
     }
 
     render() {
-        const { id, title, excerpt} = this.props.blog;
+        const { id, title, excerpt, content} = this.props.blog;
         const { author, imgUrl, isLoaded} = this.state;
         if(isLoaded) {
             return (
                 <div classname='blog-card' style={{
                     padding: '1rem',
                     marginBottom: '2rem',
-                    backgroundColor: 'white',
+                    backgroundColor: '#E8E8E8',
                     display: 'block',
                     borderRadius: '10px',
                     boxShadow: '0 1px 3px rgb(15 15 15 / 23%)'
@@ -61,8 +63,10 @@ export class BlogItem extends Component {
                     <div style={{marginTop: '2rem'}} >
                         <small>Review by: <strong style={{textTransform: 'capitalize'}}>{ author }</strong></small>
                     </div>
+                    <div  classname='content' style={{marginBottom: '10px'}} dangerouslySetInnerHTML ={{ __html: content.rendered }} />
                     <a className='blog-button'><Link className='a-text' href={`/blog/${id}`}>Read More</Link></a>
-                </div>
+                </div>  
+
             );
         } 
         return null;

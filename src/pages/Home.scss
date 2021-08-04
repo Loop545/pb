@@ -9,7 +9,7 @@
 }
 .home-container h1 {
   font: $font_regular;
-  color: $maroon2;
+  color: $dark_blue;
   font-size: 3rem;
 }
 .home-container .about-content {
@@ -40,7 +40,7 @@
   button {
     width: 120px;
     height: 40px;
-    background-color: $button1;
+    background-color: $blue;
     border: none;
     border-radius: 0.5rem;
     color: $white;
@@ -78,14 +78,14 @@
 }
 h1 {
   font: $font_regular;
-  color: $maroon2;
+  color: $dark_blue;
   font-size: 3rem;
   margin-bottom: 2rem;
 }
  .wave{
   height: 300px;
   width: 100%;
-  background-color: $b2;
+  background-color: $blue;
   margin: 0;
   padding: 0;
 }

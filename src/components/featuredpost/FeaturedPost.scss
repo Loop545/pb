@@ -8,21 +8,30 @@
 
 }
 .featured-post-card {
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-items: flex-start;
-    color:$white;
+    color: $black;
 
     h2 {
         font: $font_bold;
-        color: $maroon2;
-        font-size: 1.5rem;
+        color: $dark_blue;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-transform: capitalize;
     }
-    .read-more {
-        background-color: $button2;
+    .featured-post-button {
+        background-color: $blue;
+        border: none;
         color: $white;
         padding: 0.5rem;
         border-radius: 0.5rem;
-        margin-top: 1rem;
+        margin-top: 2rem;
+
+        .a-text{
+            text-decoration: none;
+            color: $white;
+        }
     }
+
 }

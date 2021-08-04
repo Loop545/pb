@@ -4,14 +4,10 @@ import { MenuToggle } from "./menuToggle";
 import Socail from "./social";
 import '../../styles/index.scss'
 
-// import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+
 import { Link } from 'raviger';
 
-//components
-import Home from '../../pages/Home';
-import About from '../../pages/About';
-import Scribble from '../../pages/Scribble';
-import Connect from '../../pages/Connect';
+
 
 
 const NavLinksContainer = styled.div`
@@ -24,7 +20,7 @@ const LinksWrapper = styled.ul`
   margin: 0;
   padding: 0;
   display: flex;
-  height: 160px;
+  height: 250px;
   list-style: none;
   background-color: #fff;
   width: 100%;
@@ -50,14 +46,9 @@ const Text = styled.h1`
   color: black;
   font-size: 20px;
   padding: 2rem;
-  margin-top: 1rem;
+  margin-top: 2.9rem;
 `;
 
-// const Link = styled.a`
-//   text-decoration: none;
-//   color: inherit;
-//   font-size: inherit;
-// `;
 
 const Marginer = styled.div`
   height: 2em;
@@ -76,9 +67,12 @@ export function MobileNavLinks(props) {
             <LinkItem>
               <Link className='link' href="/home">Home</Link>
             </LinkItem>
-            <LinkItem>
-              <Link className='link' href="/scribble">Scribbles</Link>
-            </LinkItem>
+                <LinkItem>
+                  <Link className='link' href="/blog">Blog</Link>
+                </LinkItem>
+                <LinkItem>
+                  <Link className='link' href="/poem">Poem</Link>
+                </LinkItem>
             <LinkItem>
               <Link className='link' href="/about">About</Link>
             </LinkItem>
@@ -90,27 +84,5 @@ export function MobileNavLinks(props) {
           </LinksWrapper>
         )}
       </NavLinksContainer>
-  //     <Router>
-  //     <Switch>
-  //     <Route path='/' exact>
-  //         <Home />
-  //     </Route>
-  //   </Switch>
-  //   <Switch>
-  //     <Route path='/scribble'>
-  //         <Scribble/>
-  //     </Route>
-  //   </Switch>
-  //   <Switch>
-  //     <Route path='/about'>
-  //         <About/>
-  //     </Route>
-  //   </Switch>
-  //   <Switch>
-  //     <Route path='/connect'>
-  //         <Connect/>
-  //     </Route>
-  //   </Switch>
-  //  </Router>
   );
 }

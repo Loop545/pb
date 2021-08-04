@@ -1,7 +1,7 @@
 @import '../styles/index.scss';
-@import '../components/BlogItem.scss';
 
-.blog-container {
+
+.poem-container {
     padding: 6rem;
     height: 100%;
     margin: 0 auto;
@@ -19,12 +19,19 @@
         margin-bottom: 1rem;
     }
 }
-.blog-container .blog-card{
+.poem-container .poem-card{
     background-color: $grey !important;
     padding: 1rem;
     background: grey;
     border: 1px solid;
     border-radius: 1rem;
     box-shadow: rbga (10,10,10,0.5);
+}
+@media screen and (max-width:768px) {
+    .blog-container {
+        padding: 2rem !important;
+        height: 100% !important;
+        margin-top: 5rem !important;
+    }
 }
 
