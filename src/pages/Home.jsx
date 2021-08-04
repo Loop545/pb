@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Img from '../static/img/about2.jpg';
-import Wave from '../static/graphics/wave.svg'
+import Header from '../static/img/header.jpg'
 import { Link } from 'raviger';
 
 import './Home.scss'
@@ -11,10 +11,27 @@ import FeaturedPost from '../components/featuredpost/FeaturedPost';
 const Home = () => {
     return (
         <>
+        <div className='header' >
+            <img src={Header} alt='waves'/>
+        
+            <div className='card-flex'>
+                <div className='card-1'>
+                    <h2>Poems</h2>
+                    <button>Read more</button>
+                </div>
+                <div className='card-2'>
+                    <h2>Blog</h2>
+                    <button>Read more</button>
+                </div>
+                <div className='card-3'>
+                    <h2>Social</h2>
+                    <button>Read more</button>    
+                </div>
+            </div>
+        </div> 
+        
         <div className='home-container'>
-            {/* <div className='wave' >
-                <img src={Wave} alt='waves'/>
-            </div>  */}
+            
             <div className='divider' />
                 <h1>About Author</h1>
                 <img src={Img} alt='img'></img>

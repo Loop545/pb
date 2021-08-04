@@ -34,7 +34,7 @@ class Connect extends Component{
 
         const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6NzAwMCIsImlhdCI6MTYyNzcyMTA1MiwibmJmIjoxNjI3NzIxMDUyLCJleHAiOjE2MjgzMjU4NTIsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.f8C3xsnhsbo62_GoZQJbmuxTIFfz3e4SGatR4PlyqsY'
         this.setState({ loading: true}, () =>{
-            axios.post (`${siteURl}/wp-json/contact-form-7/v1/contact-forms/55/feedback`,
+            axios.post (`${siteURl}/wp-json/contact-form-7/v1/contact-forms/37/feedback`,
             {formData}, {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -58,10 +58,12 @@ class Connect extends Component{
     render()  {
         const { yourName, yourEmail, subject, message, successMessage} = this.state
         return (
-            <>
-                <form onSubmit={this.onFormSubmit} style={{ margin: '20px'}}>
+            <div className='form-container'>
+                <h1> Let's have a chat <strong>04 52 510 182</strong></h1>
+                <form onSubmit={this.onFormSubmit} style={{ margin: '30px'}}>
                     <label className='form-group'>
-                    Name:
+                    Name
+                    <br/>
                     <input 
                         type='text'
                         className="form-control"
@@ -72,7 +74,8 @@ class Connect extends Component{
                     </label>
                     <br />
                     <label className='form-group'>
-                    Email:
+                    Email
+                    <br/>
                     <input 
                     type='text'
                     className="form-control"
@@ -83,7 +86,8 @@ class Connect extends Component{
                     </label>
                     <br />
                     <label className='form-group'>
-                    Subject:
+                    Subject
+                    <br/>
                     <input 
                     type='text'
                     className="form-control"
@@ -93,22 +97,22 @@ class Connect extends Component{
                     ></input>
                     </label>
                     <br />
-                    <div className="form-group">
-                    <label className="form-group"> Message:</label>
+                    <label className="form-group"> Message
+                    <br/>
                     <textarea 
                         type='textarea'
                         className="form-control"
                         name='message'
                         value={message} 
                         onChange={this.handleOnChange}
-                        rows="3"
+                        rows="1"
                     ></textarea>
-                    </div>
+                    </label>
                         <br />
-                        <button type='submit' className='button-primary'>Login</button>
+                        <button type='submit' className='button-primary'>Submit</button>
                         <h1>{successMessage}</h1>                
                     </form>
-            </>
+            </div>
         )
     }
 }
