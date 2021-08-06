@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import BlogItem from './BlogItem'
-import axios from 'axios'
+import axios from 'axios';
+
 
 
 export class Blog extends Component {
@@ -20,11 +21,13 @@ export class Blog extends Component {
         const { blogs,  isLoaded } = this.state;
         if(isLoaded) {
             return (
-                <div>
-                   {blogs.map(blog => (
-                       <BlogItem key={blog.id}blog={blog} />
-                   ))} 
-                </div>
+            
+                    <div>
+                    {blogs.map(blog => (
+                        <BlogItem key={blog.id}blog={blog} />
+                    ))} 
+                    </div>
+            
             );
         }
         return <h3>Loading...</h3>

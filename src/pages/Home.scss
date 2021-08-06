@@ -1,9 +1,11 @@
 @import "../styles/index.scss";
 
 .home-container {
-  //background-color: rgb(66, 66, 91);
+  background-color: $grey;
   padding-right: 6rem;
   padding-left: 6rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   height: 100%;
   margin: 0 auto;
   margin-top: 2rem;
@@ -46,8 +48,6 @@
     border-radius: 0.5rem;
     color: $white;
     font: $font_regular;
-    //display: flex;
-    position: relative;
     align-items: center;
     justify-content: center;
     margin-top: 3rem;
@@ -137,9 +137,11 @@ h1 {
   width: 100vw;
   height: 700px;
   left: 0;
-  z-index: -3;
+  z-index: -1;
   @media screen and (max-width:768px) {
-    display: none;
+    display: block;
+    width: 100vw;
+    height: 500px;
   }
 }
 .header .card-flex {
@@ -150,6 +152,11 @@ h1 {
   justify-content: space-evenly;
   justify-self:flex-start;
   margin-bottom: 12rem;
+  z-index: -1;
+  @media screen and (max-width:768px) {
+    display: none;
+  }
+
 
   .card-1 {
     display: block;

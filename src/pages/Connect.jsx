@@ -34,7 +34,7 @@ class Connect extends Component{
 
         const token = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6NzAwMCIsImlhdCI6MTYyNzcyMTA1MiwibmJmIjoxNjI3NzIxMDUyLCJleHAiOjE2MjgzMjU4NTIsImRhdGEiOnsidXNlciI6eyJpZCI6IjEifX19.f8C3xsnhsbo62_GoZQJbmuxTIFfz3e4SGatR4PlyqsY'
         this.setState({ loading: true}, () =>{
-            axios.post (`${siteURl}/wp-json/contact-form-7/v1/contact-forms/37/feedback`,
+            axios.post (`${siteURl}/wp-json/contact-form-7/v1/contact/37/feedback`,
             {formData}, {
                 headers: {
                     Authorization: `Bearer ${token}`

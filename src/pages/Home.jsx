@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import Img from '../static/img/about2.jpg';
 import Header from '../static/img/header.jpg'
 import { Link } from 'raviger';

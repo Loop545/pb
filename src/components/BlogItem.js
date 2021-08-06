@@ -3,6 +3,7 @@ import { Link } from 'raviger';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import './BlogItem.scss'
+import {AiFillLike} from 'react-icons/ai'
 
 
 export class BlogItem extends Component {
@@ -10,8 +11,15 @@ export class BlogItem extends Component {
     state ={
         imgUrl: '',
         author: '',
-        isLoaded:false
+        isLoaded:false,
+        likes:0
     }
+    addLike = () => {
+        let newCount = this.state.likes +1;
+        this.setState({
+            likes: newCount
+        });
+    };
 
     static propTypes ={
        blog: PropTypes.object.isRequired 
@@ -61,10 +69,11 @@ export class BlogItem extends Component {
                         />
                     </div>
                     <div style={{marginTop: '2rem'}} >
-                        <small>Review by: <strong style={{textTransform: 'capitalize'}}>{ author }</strong></small>
+                        <small>Written by: <strong style={{textTransform: 'capitalize'}}>{ author }</strong></small>
                     </div>
-                    <div  classname='content' style={{marginBottom: '10px'}} dangerouslySetInnerHTML ={{ __html: content.rendered }} />
+                    {/* <div  classname='content' style={{marginBottom: '10px'}} dangerouslySetInnerHTML ={{ __html: content.rendered }} /> */}
                     <a className='blog-button'><Link className='a-text' href={`/blog/${id}`}>Read More</Link></a>
+                    <button onClick={this.addLike}> <AiFillLike size='1rem' fill='#333A56'/>{this.state.likes}</button>
                 </div>  
 
             );

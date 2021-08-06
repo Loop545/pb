@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, navigate } from 'raviger';
 import axios from 'axios';
 
 export class Blogpage extends Component {
@@ -9,7 +9,7 @@ export class Blogpage extends Component {
     }
 
     componentDidMount() {
-        axios.get(`/wp-json/wp/v2/blog/${this.props.match.params.id}`)
+        axios.get(`/wp-json/wp/v2/blog/${this.props.match.id}`)
         .then(res => this.setState({
             blog: res.data,
             isLoaded: true
@@ -21,7 +21,7 @@ export class Blogpage extends Component {
         if(isLoaded) {
             return (
                 <Fragment>
-                    <Link to='/'>Go Back</Link>
+                    <Link navigate='/blog'>Go Back</Link>
                     <hr />
                     <h1>{ blog.title.rendered }</h1>
                     <div dangerouslySetInnerHTML={{ __html: blog.content.rendered }}></div>

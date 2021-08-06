@@ -9,7 +9,7 @@ export class FeaturedPost extends Component {
 
     state = {
         specials: [],
-        isLoaded: false
+        isLoaded: false,
     }
     componentDidMount() {
         axios.get('/wp-json/wp/v2/special')
@@ -29,7 +29,7 @@ export class FeaturedPost extends Component {
                         <div className='featured-post-card'>
                         <h2>{ special.title.rendered }</h2>
                         <div dangerouslySetInnerHTML ={{ __html: special.excerpt.rendered }} />
-                        <Link href='/scribble'>
+                        <Link href='/blog'>
                                 <button class='read-more'  label='more' >
                                 Read more</button>
                         </Link>
