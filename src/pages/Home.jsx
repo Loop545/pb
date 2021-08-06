@@ -31,11 +31,16 @@ const Home = () => {
             <div className='home-container'>
                 <div className='divider'/>
                 <h1>About Author</h1>
-                <img src={Img} alt='img'></img>
                 <div className='about-content'>
+                    <div className='image'>
+                        <img src={Img} alt='img'></img>
+                    </div>
+                    
                     <div className='content'>
-                        <p>You will also see introductions on websites that promote software and applications. In these cases, the introduction gives quick information about the software, explaining what it does and its top features. These introductions almost always include a graphical element of some sort, usually an illustration or logo for the software, but sometimes screenshots in the case of Web applications. Directly below that, you will often find a button or two linking to the download or purchase page.
-                        Here’s a website for a Web application that includes an introduction. The first thing you see is the large typography, which immediately grabs the user. The user sees this first, then their eye is guided to the sentence below, which provides more information. Next are two buttons: one for a tour, which gives the user more information, and the other to sign up. You can’t see it in the screenshot, but an illustration is next to the text that grabs and intrigues the user visually.</p>
+                        <h1>Hi, I am Pradip Bhandari</h1><p> and a stardust.<br/>
+                        Coming from a land of Buddha;<br/>I long for opening my find, freeing it into to the world of fantasy.<br/>                 		
+                        How great it is to live in a fantasy.
+                        </p>
                         <Link href='/about'>
                             <button  label='more' >
                             Learn More</button>
