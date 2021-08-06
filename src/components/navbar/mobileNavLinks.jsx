@@ -26,7 +26,7 @@ const LinksWrapper = styled.ul`
   width: 100%;
   flex-direction: column;
   position: fixed;
-  top: 100px;
+  top: 60px;
   left: 0;
   box-shadow: 0 1px 3px rgb(15 15 15 / 23%);
 `;
@@ -44,15 +44,14 @@ const LinkItem = styled.li`
 
 const Text = styled.h1`
   color: black;
-  font-size: 20px;
-  padding: 2rem;
-  margin-top: 2.9rem;
+  font-size: 18px;
+  padding: 1rem;
+  margin-top: 1.7rem;
 `;
 
 
 const Marginer = styled.div`
   height: 2em;
-  
 `;
 
 export function MobileNavLinks(props) {

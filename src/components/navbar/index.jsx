@@ -17,7 +17,17 @@ const NavbarContainer = styled.div`
     background-color: white;
     color: white;
     position: fixed;
-    
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 60px;
+        box-shadow: 0 1px 3px rgb(15 15 15 / 23%);
+        display: flex;
+        align-items: center;
+        padding: 0rem 1rem;
+        background-color: white;
+        color: white;
+        position: fixed;
+      }
 `;
 const LeftSection = styled.div`
     display:flex;
