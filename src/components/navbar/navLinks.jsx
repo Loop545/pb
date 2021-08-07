@@ -30,7 +30,7 @@ const LinkItem = styled.li`
     color: black;
     font: $font_regular;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 20px;
     align-items: center;
     justify-content: center;
     display: flex;

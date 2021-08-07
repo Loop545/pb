@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import Img from '../static/img/about2.jpg';
-import Header from '../static/img/header.jpg'
+import Header from '../static/graphics/background.png'
 import { Link } from 'raviger';
-
+import Typing from 'react-typing-animation';
 import './Home.scss'
 import FeaturedPost from '../components/featuredpost/FeaturedPost';
 
@@ -10,9 +10,21 @@ const Home = () => {
     return (
         <>
             <div className='header' >
-                <img src={Header} alt='waves'/>
-            
-                <div className='card-flex'>
+                <div className='about'>
+                <h2>Hi, I am </h2><Typing><h2>Pradip Bhandari</h2>
+                <Typing.Delay ms={1000} /> 
+                <p>and a stardust.<br/>
+                        Coming from a land of Buddha;<br/>
+                        I long for opening my find, freeing it into to the world of fantasy.
+                        <br/>                 		
+                        How great it is to live in a fantasy.
+                        </p>
+                        <h1>WELCOME!!!</h1>
+                        <Typing.Reset count={1} delay={500} />
+                </Typing>
+                </div>
+                {/* <img src={Header} alt='waves'/> */}
+                {/* <div className='card-flex'>
                     <div className='card-1'>
                         <h2>Poems</h2>
                         <button>Read more</button>
@@ -25,7 +37,7 @@ const Home = () => {
                         <h2>Social</h2>
                         <button>Read more</button>    
                     </div>
-                </div>
+                </div> */}
             </div> 
             
             <div className='home-container'>
