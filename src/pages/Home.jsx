@@ -8,9 +8,9 @@ import FeaturedPost from '../components/featuredpost/FeaturedPost';
 
 const Home = () => {
     return (
-        <>
-            <div className='header' >
-                <div className='about'>
+        <div className='container'>
+            <section className='header' >
+             <div className='one'>
                 <h2>Hi, I am </h2><Typing><h2>Pradip Bhandari</h2>
                 <Typing.Delay ms={1000} /> 
                 <p>and a stardust.<br/>
@@ -22,8 +22,50 @@ const Home = () => {
                         <h1>WELCOME!!!</h1>
                         <Typing.Reset count={1} delay={500} />
                 </Typing>
+            </div>
+            </section> 
+            <section className='home-container'>
+                <div className='two'>
+                    <div className='divider'/>
+                    <h1>About Author</h1>
+                    <div className='about-content'>
+                        <div className='image'>
+                            <img src={Img} alt='img'></img>
+                        </div>
+                        <div className='content'>
+                            <h1>Hi, I am Pradip Bhandari</h1><p> and a stardust.<br/>
+                            Coming from a land of Buddha;<br/>I long for opening my find, freeing it into to the world of fantasy.<br/>                 		
+                            How great it is to live in a fantasy.
+                            </p>
+                            <Link href='/about'>
+                                <button  label='more' >
+                                Learn More</button>
+                            </Link>
+                        </div>      
+                    </div>
                 </div>
-                {/* <img src={Header} alt='waves'/> */}
+                
+            </section>
+            <section className='wave'/>
+            <section className='featured'>
+                    <div className='three'>
+                    <div className='divider' />
+                    <div className='featured-post'>
+                        <h1>Post of the day.</h1>
+                        <FeaturedPost />
+                    </div>
+                </div>
+            </section>
+        </div>
+    )
+}
+export default Home;
+
+
+
+
+
+{/* <img src={Header} alt='waves'/> */}
                 {/* <div className='card-flex'>
                     <div className='card-1'>
                         <h2>Poems</h2>
@@ -38,36 +80,3 @@ const Home = () => {
                         <button>Read more</button>    
                     </div>
                 </div> */}
-            </div> 
-            
-            <div className='home-container'>
-                <div className='divider'/>
-                <h1>About Author</h1>
-                <div className='about-content'>
-                    <div className='image'>
-                        <img src={Img} alt='img'></img>
-                    </div>
-                    
-                    <div className='content'>
-                        <h1>Hi, I am Pradip Bhandari</h1><p> and a stardust.<br/>
-                        Coming from a land of Buddha;<br/>I long for opening my find, freeing it into to the world of fantasy.<br/>                 		
-                        How great it is to live in a fantasy.
-                        </p>
-                        <Link href='/about'>
-                            <button  label='more' >
-                            Learn More</button>
-                        </Link>
-                    </div>      
-                </div>
-                
-            </div>
-            <div className='wave'/>
-            <div className='divider' />
-            <div className='featured-post'>
-                <h1>Post of the day.</h1>
-                <FeaturedPost />
-            </div>
-        </>
-    )
-}
-export default Home;

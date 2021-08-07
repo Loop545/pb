@@ -1,6 +1,28 @@
 @import "../styles/index.scss";
 
-.home-container {
+section {
+  height: 100vh;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+section .footer{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+.container {
+  // scroll-snap-type: y mandatory;
+  // overflow-y: scroll;
+  // height: 100vh;
+}
+.featured .three{
+  background-color: $white;
+}
+
+.home-container .two{
   background-color: $grey;
   padding-right: 6rem;
   padding-left: 6rem;
@@ -36,7 +58,7 @@
   font-size: 18px;
   text-align:justify;
 }
-.header .about {
+.header .one {
   margin-top: 90px;
   position: relative;
   width: 100%;
@@ -150,7 +172,7 @@ h1 {
   }
   .home-container .about-content {
     display: block;
-    margin-top: 1rem;
+    margin-top: 1rem; 
     padding: 0rem;
   }
   .home-container .about-content img {
@@ -190,7 +212,7 @@ h1 {
     color: #ffffff;
     font: 400 1rem "Source Sans Pro", sans-serif;
   }
-  .header .about {
+  .header .one {
     margin-top: 0;
     position: relative;
     width: 100%;
@@ -217,105 +239,4 @@ h1 {
     top: 59px;
     
   }
-}
-.header .card-flex {
-  position: relative;
-  display: flex;
-  width: 80%;
-  height: 150px;
-  justify-content: space-evenly;
-  justify-self:flex-start;
-  margin-bottom: 12rem;
-  z-index: -1;
-  @media screen and (max-width:768px) {
-    display: none;
-  }
-
-
-  .card-1 {
-    display: block;
-    width: 300px;
-    height: 300px;
-    background-image: url(../static/img/card-1.jpg) ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-
-    h2{
-      font: $font_bold;
-      color: $grey;
-      text-transform: uppercase;
-      font-size: 3rem;
-      font-weight: 400;
-      padding: 3rem;
-      -webkit-text-stroke: 1px $blue;
-    }
-
-    button {
-      border: none;
-      background-color: black;
-      color: white;
-      height: 30px;
-    }
-  }
-  .card-2 {
-    background-color: $blue;
-    display: block;
-    width: 300px;
-    height: 300px;
-    background-image: url(../static/img/card-2.jpg) ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-
-    h2{
-      font: $font_bold;
-      color: $grey;
-      text-transform: uppercase;
-      font-size: 3rem;
-      font-weight: 400;
-      padding: 3rem;
-      -webkit-text-stroke: 1px $blue;
-    }
-
-    button {
-      border: none;
-      background-color: black;
-      color: white;
-    }
-  }
-  .card-3 {
-    background-color: $blue;
-    display: block;
-    width: 300px;
-    height: 300px;
-    background-image: url(../static/img/card-3.jpg) ;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-
-    h2{
-      font: $font_bold;
-      color: $grey;
-      text-transform: uppercase;
-      font-size: 3rem;
-      font-weight: 400;
-      padding: 3rem;
-      -webkit-text-stroke: 1px $blue;
-      border:$blue
-    }
-
-    button {
-      border: none;
-      background-color: black;
-      color: white;
-    }
-  }
- 
 }

@@ -1,8 +1,8 @@
 @import '../../styles/index.scss';
 
 .footer-container {
+    position: relative;
     width: 100%;
-    height: 300px;
     padding: 2rem;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,6 @@
     padding: 2rem;
     border-bottom: 1px solid $white;
     margin-bottom: 0.5rem;
-    position: relative;
     top:130px;
     
     .legal-list {
@@ -49,14 +48,13 @@
         margin: 0 auto;
         .legal-list {
             display: block;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
     }
 }
 .footer-container .social-container {
     width: 30%;
     display: flex;
-    position: relative;
     bottom: -8rem;
 
     .icons {
