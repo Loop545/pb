@@ -27,7 +27,7 @@ const LinkItem = styled.li`
     margin-top: 1.6rem;
     padding: 0 1.1em;
     height: 100%;
-    color: black;
+    color: white;
     font: $font_regular;
     font-weight: 500;
     font-size: 20px;

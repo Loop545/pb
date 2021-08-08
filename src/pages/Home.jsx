@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Img from '../static/img/about2.jpg';
+import Img1 from '../static/img/card1.jpg';
+import Img2 from '../static/img/card2.jpg';
 import Header from '../static/graphics/background.png'
 import { Link } from 'raviger';
 import Typing from 'react-typing-animation';
@@ -26,22 +27,34 @@ const Home = () => {
             </section> 
             <section className='home-container'>
                 <div className='two'>
-                    <div className='divider'/>
-                    <h1>About Author</h1>
-                    <div className='about-content'>
-                        <div className='image'>
-                            <img src={Img} alt='img'></img>
+                    <div className='grid-1'>
+                        {/* <div className='divider'/>
+                        <h1>About Author</h1> */}
+                        <div className='about-content'>
+                            <div className='content'>
+                                <h1>Hi, I am Pradip Bhandari</h1><p> and a stardust.<br/>
+                                Coming from a land of Buddha;<br/>I long for opening my find, freeing it into to the world of fantasy.<br/>                 		
+                                How great it is to live in a fantasy.
+                                </p>
+                                <Link href='/about'>
+                                    <button  label='more' >
+                                    Learn More</button>
+                                </Link>
+                            </div>      
                         </div>
-                        <div className='content'>
-                            <h1>Hi, I am Pradip Bhandari</h1><p> and a stardust.<br/>
-                            Coming from a land of Buddha;<br/>I long for opening my find, freeing it into to the world of fantasy.<br/>                 		
-                            How great it is to live in a fantasy.
-                            </p>
-                            <Link href='/about'>
-                                <button  label='more' >
-                                Learn More</button>
-                            </Link>
-                        </div>      
+                    </div>
+                    <div className='grid-2'>
+                        <div className='image'>
+                            <img src={Img1} alt='img'></img>
+                        </div>
+                    </div>
+                    <div className='grid-3'>
+                        <div className='image'>
+                            <img src={Img2} alt='img'></img>
+                        </div>
+                    </div>
+                    <div className='grid-4'>
+                        <h1> hey</h1>
                     </div>
                 </div>
                 

@@ -10,21 +10,22 @@ import Socail  from './social';
 const NavbarContainer = styled.div`
     width: 100%;
     height: 60px;
-    box-shadow: 0 1px 3px rgb(15 15 15 / 23%);
+    // box-shadow: 0 1px 3px rgb(15 15 15 / 23%);
     display: flex;
     align-items: center;
     padding: 3rem 1rem;
-    background-color: white;
+    background: black;
     color: white;
     position: fixed;
     @media (max-width: 768px) {
         width: 100%;
         height: 60px;
-        box-shadow: 0 1px 3px rgb(15 15 15 / 23%);
+        // box-shadow: 0 1px 3px rgb(15 15 15 / 23%);
         display: flex;
         align-items: center;
         padding: 0rem 1rem;
-        background-color: white;
+        background-color: black;
+        opacity:0.7;
         color: white;
         position: fixed;
       }
