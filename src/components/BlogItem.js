@@ -4,10 +4,23 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import './BlogItem.scss'
 import {AiFillLike} from 'react-icons/ai'
+import Popup from './popop';
 
 
 export class BlogItem extends Component {
     
+    constructor() {
+        super();
+        this.state = {
+          showPopup: false
+        };
+    }
+    togglePopup() {
+        this.setState({
+          showPopup: !this.state.showPopup
+        });
+      }
+
     state ={
         imgUrl: '',
         author: '',
@@ -23,7 +36,7 @@ export class BlogItem extends Component {
 
     static propTypes ={
        blog: PropTypes.object.isRequired 
-    }
+    };
 
     componentDidMount() {
         const { featured_media, author} = this.props.blog;
@@ -71,9 +84,16 @@ export class BlogItem extends Component {
                     <div style={{marginTop: '2rem'}} >
                         <small>Written by: <strong style={{textTransform: 'capitalize'}}>{ author }</strong></small>
                     </div>
-                    {/* <div  classname='content' style={{marginBottom: '10px'}} dangerouslySetInnerHTML ={{ __html: content.rendered }} /> */}
                     <a className='blog-button'><Link className='a-text' href={`/blog/${id}`}>Read More</Link></a>
                     <button onClick={this.addLike}> <AiFillLike size='1rem' fill='#333A56'/>{this.state.likes}</button>
+                    <button onClick={this.togglePopup.bind(this)}>show popup</button>
+                    {this.state.showPopup ? 
+                        <Popup 
+                            id= {id.rendered}
+                            closePopup={this.togglePopup.bind(this)}
+                        /> 
+                        : null
+                        }
                 </div>  
 
             );

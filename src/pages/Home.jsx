@@ -48,14 +48,14 @@ const Home = () => {
                             <img src={Img1} alt='img'></img>
                         </div>
                     </div>
-                    <div className='grid-3'>
+                    {/* <div className='grid-3'>
                         <div className='image'>
                             <img src={Img2} alt='img'></img>
                         </div>
                     </div>
                     <div className='grid-4'>
                         <h1> hey</h1>
-                    </div>
+                    </div> */}
                 </div>
                 
             </section>

@@ -21,8 +21,8 @@ section .footer{
 .home-container .two{
   height: 100vh;
   width: 100%;
-  padding: 2rem;
   margin: 0 auto;
+  // padding: 0rem 2rem;
   display: inline-grid;
   align-content: stretch;
   grid-template-columns: 50% 50%;
@@ -172,7 +172,7 @@ h1 {
  .wave{
   height: 300px;
   width: 100%;
-  background-color: $blue;
+  background-color: black;
   margin: 0;
   padding: 0;
 }
