@@ -1,0 +1,1 @@
+export const LOAD_BLOGS_SUCCESS = 'LOAD_BLOGS_SUCCESS';

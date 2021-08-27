@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 
 // Pages
+import newblog from '../src/components/blog/NewBlogs';
+import blogAll from '../src/components/blog/BlogAll';
 import Blog from './pages/Blog';
 import Poem from './pages/Poem';
 import Home from './pages/Home';
@@ -23,6 +25,9 @@ const App = () => {
 				<Route path="/connect" component={Connect} />
 				<Route path="/blog" component={Blog} />
 				<Route path="/poem" component={Poem} />
+				<Route path="/newblogs" component={newblog} />
+				<Route path="/newblog/:slug" component={blogAll} />
+				<Route path="/newblog" component={blogAll} />
 				{/* <Route exact path="/book/:id" component={BlogPage} /> */}
 			</Switch>
 			<Footer />
