@@ -1,40 +1,71 @@
 @import '../../styles/index.scss';
 
 .dropdown {
-    float: left;
-    overflow: hidden;
-  }
+  float: left;
+  overflow: hidden;
+}
   
 .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: white;
-    background-color: inherit;
-    font-weight: 500;
-    font-size: 20px;
-    margin-top: 1.5rem;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 1.6rem;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: black;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    margin-bottom: 0.5rem;
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-bottom: 0.5rem;
 }
 
 .dropdown-content a {
-    float: none;
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+// Nav bar
+
+nav {
+  height: 100%;
+	display: flex;
+	position: sticky;
+	align-items: center;
+
+  a{
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid transparent;
+    transition: all 220ms ease-in-out;
+    padding-bottom: 0.2rem;
+    margin-top: 1.6rem;
+    padding: 0 1.1em;
+    height: 100%;
+    color: white;
+    font: $font_regular;
+    font-weight: 500;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    &:hover {
+        border-bottom: 2px solid #336699;
+    }
   }
+}

@@ -1,99 +1,40 @@
 import React from 'react';
-import styled from 'styled-components';
 import '../../styles/index.scss';
-import './Link.scss'
-import { FiChevronsDown} from 'react-icons/fi'
-//import {BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { Link } from 'raviger';
+import './Link.scss';
+import { FiChevronsDown } from 'react-icons/fi';
+import { NavLink } from 'react-router-dom';
 
+const Navlinks = () => {
+	const activeStyle = { color: '#F1342A' };
+	return (
+		<nav>
+			<NavLink to="/" activeStyle={activeStyle} exact>
+				Home
+			</NavLink>
 
+			<div className="dropdown">
+				<button className="dropbtn">
+					Scribbles
+					<FiChevronsDown size="1rem" />
+				</button>
+				<div className="dropdown-content">
+					<NavLink to="/blog" activeStyle={activeStyle}>
+						Blog
+					</NavLink>
 
-const NavLinksContainer = styled.div`
-    height: 100%;
-    display: flex;
-    position: sticky;
-    align-items: center;
-`;
+					<NavLink to="/poem" activeStyle={activeStyle}>
+						Poem
+					</NavLink>
+				</div>
+			</div>
+			<NavLink to="/about" activeStyle={activeStyle}>
+				About
+			</NavLink>
 
-const LinksWrapper = styled.ul`
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100%;
-    list-style: none;
-`;
-
-const LinkItem = styled.li`
-    margin-top: 1.6rem;
-    padding: 0 1.1em;
-    height: 100%;
-    color: white;
-    font: $font_regular;
-    font-weight: 500;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-`;
-
-// const Link = styled.a`
-//     text-decoration: none;
-//     color: inherit;
-//     font-size: inherit;
-//     border-bottom: 2px solid transparent;
-//     transition: all 220ms ease-in-out;
-//     padding-bottom: 0.2rem;
-
-//     &:hover {
-//         border-bottom: 2px solid #336699;
-//     }
-// `;
-
-const  Navlinks= (props) => {
-    return <NavLinksContainer>
-                <LinksWrapper>
-                    <LinkItem><Link className='link' href='/home'>Home</Link></LinkItem>
-                    <div className='dropdown'>
-                        <button className='dropbtn'>
-                            Scribbles
-                            <FiChevronsDown size='1rem'/>
-                        </button>
-                            <div className='dropdown-content'>
-                            <LinkItem>
-                            <Link className='link' href="/blog">Blog</Link>
-                            </LinkItem>
-                            <LinkItem>
-                            <Link className='link' href="/poem">Poem</Link>
-                            </LinkItem>
-                            </div>
-                        
-                    </div> 
-                    <LinkItem><Link className='link' href='/about'>About</Link></LinkItem>
-                    <LinkItem><Link className='link' href='connect'>Connect</Link></LinkItem>
-                </LinksWrapper>
-            </NavLinksContainer>
-            {/* 
-                <Router>
-                <Switch>
-             <Route path='/' exact>
-                 <Home />
-             </Route>
-            </Switch>
-            <Switch>
-             <Route path='/scribble'>
-                 <Scribble/>
-             </Route>
-            </Switch>
-            <Switch>
-             <Route path='/about'>
-                 <About/>
-             </Route>
-            </Switch>
-            <Switch>
-             <Route path='/connect'>
-                 <Connect/>
-             </Route>
-            </Switch>
-        </Router> */}
-}
+			<NavLink to="/connect" activeStyle={activeStyle}>
+				Contact
+			</NavLink>
+		</nav>
+	);
+};
 export default Navlinks;

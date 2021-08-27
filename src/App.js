@@ -1,38 +1,33 @@
-import React, { Component, Fragment} from 'react';
-//import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './App.scss';
-import { useRoutes } from 'raviger';
-import RouteConfig from '../src/components/navbar/routes';
-//components
-//import Blogs from './components/Blog'
-//import BlogPage from './components/Blogpage'
-// import Poems from './components/Poem'
-// import PoemPage from './components/Poempage'
 
-import Footer from '../src/components/footer/footer'
-import Header from '../src/components/header/Header'
+// Pages
+import Blog from './pages/Blog';
+import Poem from './pages/Poem';
+import Home from './pages/Home';
+import Connect from './pages/Connect';
+import About from './pages/About';
 
+// Components
+import Footer from '../src/components/footer/footer';
+import Header from '../src/components/header/Header';
 
-
-const App  =() => {
-    const Routes = useRoutes(RouteConfig);
-    return (
-      <div className='app'>
-         {/* <Router >
-         <Fragment>
-           <Route exact path='/' component={Blogs}/>
-           <Route exact path='/book/:id' component={BlogPage}/>
-         </Fragment>
-      </Router> */}
-      
-      {/* <Navbar/> */}
-      <Header />
-      {Routes}
-      <Footer />
-      </div>
-      
-    );
-  
-}
+const App = () => {
+	return (
+		<div className="app">
+			<Header />
+			<Switch>
+				<Route exact path="/" component={Home} />
+				<Route path="/about" component={About} />
+				<Route path="/connect" component={Connect} />
+				<Route path="/blog" component={Blog} />
+				<Route path="/poem" component={Poem} />
+				{/* <Route exact path="/book/:id" component={BlogPage} /> */}
+			</Switch>
+			<Footer />
+		</div>
+	);
+};
 
 export default App;
