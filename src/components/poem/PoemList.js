@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const BlogList = ({ blogs }) => (
+const PoemList = ({ poems }) => (
 	<table className="table" style={{ marginTop: '10rem' }}>
 		<thead>
 			<tr>
@@ -13,22 +13,22 @@ const BlogList = ({ blogs }) => (
 			</tr>
 		</thead>
 		<tbody>
-			{blogs.map((blog) => {
+			{poems.map((poem) => {
 				return (
-					<tr key={blog.id}>
+					<tr key={poem.id}>
 						<td>
 							<a
 								className="btn btn-light"
-								href={'http://localhost:3000/blogpage/' + blog.slug}
+								href={'http://localhost:3000/poempage/' + poem.slug}
 							>
 								Watch
 							</a>
 						</td>
 						<td>
-							<Link to={'/blogpage/' + blog.id}>{blog.title.rendered}</Link>
+							<Link to={'/poempage/' + poem.id}>{poem.title.rendered}</Link>
 						</td>
-						<td>{blog.acf.author}</td>
-						<td>{blog.type}</td>
+						<td>{poem.acf.author}</td>
+						<td>{poem.type}</td>
 					</tr>
 				);
 			})}
@@ -36,8 +36,8 @@ const BlogList = ({ blogs }) => (
 	</table>
 );
 
-BlogList.propTypes = {
-	blogs: PropTypes.array.isRequired,
+PoemList.propTypes = {
+	poems: PropTypes.array.isRequired,
 };
 
-export default BlogList;
+export default PoemList;

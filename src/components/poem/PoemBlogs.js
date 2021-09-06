@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as blogActions from '../../redux/actions/blogActions';
+import * as poemActions from '../../redux/actions/poemActions';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
-import BlogList from './PoemList';
+import PoemList from './PoemList';
 
-class NewBlogs extends React.Component {
+class NewPoems extends React.Component {
 	componentDidMount() {
-		if (this.props.blogs.length === 0) {
-			this.props.actions.loadBlogs().catch((error) => {
+		if (this.props.poems.length === 0) {
+			this.props.actions.loadPoems().catch((error) => {
 				alert('Loading courses failed' + error);
 			});
 		}
@@ -17,9 +17,9 @@ class NewBlogs extends React.Component {
 	render() {
 		return (
 			<>
-				<h2>Blogs</h2>
-				<BlogList blogs={this.props.blogs} />
-				{/* {this.props.blogs.map((blog) => (
+				<h2>Poems</h2>
+				<PoemList poems={this.props.poems} />
+				{/* {this.props.poems.map((blog) => (
 					<div key={blog.title.rendered}>{blog.title.rendered}</div>
 				))} */}
 			</>
@@ -27,21 +27,21 @@ class NewBlogs extends React.Component {
 	}
 }
 
-NewBlogs.propTypes = {
-	blogs: PropTypes.array.isRequired,
+NewPoems.propTypes = {
+	poems: PropTypes.array.isRequired,
 	actions: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
 	return {
-		blogs: state.blogs,
+		poems: state.poems,
 	};
 }
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators(blogActions, dispatch),
+		actions: bindActionCreators(poemActions, dispatch),
 	};
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NewBlogs);
+export default connect(mapStateToProps, mapDispatchToProps)(NewPoems);
