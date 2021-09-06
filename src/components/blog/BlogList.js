@@ -25,7 +25,7 @@ const BlogList = ({ blogs }) => (
 							</a>
 						</td>
 						<td>
-							<Link to={'/newblog/' + blog.slug}>{blog.title.rendered}</Link>
+							<Link to={'/newblog/' + blog.id}>{blog.title.rendered}</Link>
 						</td>
 						<td>{blog.acf.author}</td>
 						<td>{blog.type}</td>

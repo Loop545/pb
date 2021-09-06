@@ -1,45 +1,34 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import * as blogActions from '../../redux/actions/blogActions';
-import PropTypes from 'prop-types';
-import { bindActionCreators } from 'redux';
+import React, { useEffect, useState } from 'react';
 
-class BlogAll extends React.Component {
-	componentDidMount() {
-		if (this.props.blogs.length === 0) {
-			this.props.actions.loadBlogs().catch((error) => {
-				alert('Loading courses failed' + error);
-			});
-		}
-	}
+function BlogAll(props) {
+	const [blogs, setBlogs] = useState();
 
-	render() {
-		return (
-			<>
-				<h2>Read All</h2>
-				{this.props.blogs.map((blog) => {
-					<p key={blog.title.rendered}>{blog.content.rendered}</p>;
-				})}
-			</>
-		);
-	}
+	useEffect(() => {
+		const fetchBlogs = async () => {
+			const response = await fetch(
+				`http://localhost:7000/wp-json/wp/v2/blog/` + props.match.params.id,
+			);
+			const blogData = await response.json({});
+			setBlogs(blogData);
+		};
+		fetchBlogs();
+	}, []);
+
+	return (
+		<div
+			className="blog-content"
+			style={{ marginTop: '6rem', display: 'block' }}
+		>
+			{blogs && (
+				<div>
+					<h2> {blogs.title.rendered}</h2>
+					<div
+						dangerouslySetInnerHTML={{ __html: blogs.content.rendered }}
+					></div>
+				</div>
+			)}
+		</div>
+	);
 }
 
-BlogAll.propTypes = {
-	blogs: PropTypes.array.isRequired,
-	actions: PropTypes.object.isRequired,
-};
-
-function mapStateToProps(state) {
-	return {
-		blogs: state.blogs,
-	};
-}
-
-function mapDispatchToProps(dispatch) {
-	return {
-		actions: bindActionCreators(blogActions, dispatch),
-	};
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(BlogAll);
+export default BlogAll;

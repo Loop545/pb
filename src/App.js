@@ -26,9 +26,8 @@ const App = () => {
 				<Route path="/blog" component={Blog} />
 				<Route path="/poem" component={Poem} />
 				<Route path="/newblogs" component={newblog} />
-				<Route path="/newblog/:slug" component={blogAll} />
+				<Route path="/newblog/:id" component={blogAll} />
 				<Route path="/newblog" component={blogAll} />
-				{/* <Route exact path="/book/:id" component={BlogPage} /> */}
 			</Switch>
 			<Footer />
 		</div>
