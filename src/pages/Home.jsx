@@ -29,55 +29,6 @@ const Home = () => {
 					</Typing>
 				</div>
 			</section>
-			<section className="home-container">
-				<div className="two">
-					<div className="grid-2">
-						<div className="image">
-							<img src={Img1} alt="img"></img>
-						</div>
-					</div>
-					<div className="grid-1">
-						{/* <div className='divider'/>
-                        <h1>About Author</h1> */}
-						<div className="about-content">
-							<div className="content">
-								<h1>Hi, I am Pradip Bhandari</h1>
-								<p>
-									{' '}
-									and a stardust.
-									<br />
-									Coming from a land of Buddha;
-									<br />I long for opening my find, freeing it into to the world
-									of fantasy.
-									<br />
-									How great it is to live in a fantasy.
-								</p>
-								<Link href="/about">
-									<button label="more">Learn More</button>
-								</Link>
-							</div>
-						</div>
-					</div>
-					{/* <div className='grid-3'>
-                        <div className='image'>
-                            <img src={Img2} alt='img'></img>
-                        </div>
-                    </div>
-                    <div className='grid-4'>
-                        <h1> hey</h1>
-                    </div> */}
-				</div>
-			</section>
-			<section className="wave" />
-			<section className="featured">
-				<div className="three">
-					<div className="divider" />
-					<div className="featured-post">
-						<h1>Post of the day.</h1>
-						<FeaturedPost />
-					</div>
-				</div>
-			</section>
 		</div>
 	);
 };

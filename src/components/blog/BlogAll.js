@@ -15,10 +15,7 @@ function BlogAll(props) {
 	}, []);
 
 	return (
-		<div
-			className="blog-content"
-			style={{ marginTop: '6rem', display: 'block' }}
-		>
+		<div className="container block mx-auto px-24">
 			{blogs && (
 				<div>
 					<h2> {blogs.title.rendered}</h2>

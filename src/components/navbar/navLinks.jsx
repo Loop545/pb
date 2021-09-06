@@ -18,11 +18,11 @@ const Navlinks = () => {
 					<FiChevronsDown size="1rem" />
 				</button>
 				<div className="dropdown-content">
-					<NavLink to="/blog" activeStyle={activeStyle}>
+					<NavLink to="/blogs" activeStyle={activeStyle}>
 						Blog
 					</NavLink>
 
-					<NavLink to="/poem" activeStyle={activeStyle}>
+					<NavLink to="/poems" activeStyle={activeStyle}>
 						Poem
 					</NavLink>
 				</div>

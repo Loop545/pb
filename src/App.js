@@ -4,9 +4,9 @@ import './App.scss';
 
 // Pages
 import newblog from '../src/components/blog/NewBlogs';
+import newPoem from '../src/components/poem/PoemBlogs';
 import blogAll from '../src/components/blog/BlogAll';
-import Blog from './pages/Blog';
-import Poem from './pages/Poem';
+import poemAll from '../src/components/poem/PoemAll';
 import Home from './pages/Home';
 import Connect from './pages/Connect';
 import About from './pages/About';
@@ -23,13 +23,14 @@ const App = () => {
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />
 				<Route path="/connect" component={Connect} />
-				<Route path="/blog" component={Blog} />
-				<Route path="/poem" component={Poem} />
-				<Route path="/newblogs" component={newblog} />
-				<Route path="/newblog/:id" component={blogAll} />
-				<Route path="/newblog" component={blogAll} />
+				<Route path="/blogs" component={newblog} />
+				<Route path="/blogpage/:id" component={blogAll} />
+				<Route path="/blogpage" component={blogAll} />
+				<Route path="/poems" component={newPoem} />
+				<Route path="/poempage/:id" component={poemAll} />
+				<Route path="/poempage" component={poemAll} />
 			</Switch>
-			<Footer />
+			{/* <Footer /> */}
 		</div>
 	);
 };

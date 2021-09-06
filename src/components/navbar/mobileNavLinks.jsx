@@ -23,10 +23,10 @@ const MobileNavLinks = (props) => {
 					<NavLink to="/" activeStyle={activeStyle} exact>
 						Home
 					</NavLink>
-					<NavLink to="/blog" activeStyle={activeStyle}>
+					<NavLink to="/blogs" activeStyle={activeStyle}>
 						Blog
 					</NavLink>
-					<NavLink to="/poem" activeStyle={activeStyle}>
+					<NavLink to="/poems" activeStyle={activeStyle}>
 						Poem
 					</NavLink>
 					<NavLink to="/connect" activeStyle={activeStyle}>
