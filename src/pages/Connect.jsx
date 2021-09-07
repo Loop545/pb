@@ -60,7 +60,7 @@ class Connect extends Component{
         return (
             <div className='form-container'>
                 <h1> Let's have a chat <strong>04 52 510 182</strong></h1>
-                <form onSubmit={this.onFormSubmit} style={{ margin: '30px'}}>
+                <form onSubmit={this.onFormSubmit}>
                     <label className='form-group'>
                     Name
                     <br/>
