@@ -14,11 +14,13 @@ import About from './pages/About';
 // Components
 import Footer from '../src/components/footer/footer';
 import Header from '../src/components/header/Header';
+import Corner from './components/navbar/cornerNav';
 
 const App = () => {
 	return (
 		<div className="app">
-			<Header />
+			{/* <Header /> */}
+			<Corner/>
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />
