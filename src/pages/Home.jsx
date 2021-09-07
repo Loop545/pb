@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import Img1 from '../static/img/card1.jpg';
-import { Link } from 'raviger';
+import React from 'react';
 import Typing from 'react-typing-animation';
 import './Home.scss';
-import FeaturedPost from '../components/featuredpost/FeaturedPost';
+
 
 const Home = () => {
 	return (
-		<div className="container">
+		<div className="main-container">
 			<section className="header">
 				<div className="one">
 					<h2>Hi, I am </h2>
