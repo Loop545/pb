@@ -7,7 +7,7 @@
 .corner {
 	padding: 17px 20px;
 	position: fixed;
-    color: red;
+    color: white;
 }
 .topleft {
 	left: 0;
@@ -41,7 +41,7 @@ li {
 	padding-left: 17px;
 	transition: opacity 1s;
 	-webkit-transition: opacity 1s;
-    color: red;
+    color: white;
     font: $font_bold;
     font-size: 1.25rem;
 }
@@ -87,7 +87,4 @@ a.active {
 	&:hover {
 		opacity: 0.5;
 	}
-}
-.secondary {
-	opacity: 0.5;
 }

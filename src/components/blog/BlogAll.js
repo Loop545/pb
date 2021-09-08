@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// Components
+import Social from '../social/socailMedia';
+
 function BlogAll(props) {
 	const [blogs, setBlogs] = useState();
 
@@ -16,7 +19,7 @@ function BlogAll(props) {
 	}, []);
 
 	return (
-		<div className=" blog md:container block mx-auto px-24 mt-6">
+		<div className="blog md:container block mx-auto mt-20 p-24 shadow-lg border-1 rounded-lg">
 			{blogs && (
 				<div>
 					<h2 className='font-bold'> {blogs.title.rendered}</h2>
@@ -25,7 +28,10 @@ function BlogAll(props) {
 					></div>
 				</div>
 			)}
+			<div className='flex justify-between'>
 			<button className='bg-black hover:bg-gray-dark text-white font-bold py-2 px-4 rounded'><Link to='/blogs'> Go back </Link></button>
+			<Social/>
+			</div>
 		</div>
 	);
 }

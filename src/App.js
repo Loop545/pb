@@ -19,8 +19,8 @@ import Corner from './components/navbar/cornerNav';
 const App = () => {
 	return (
 		<div className="app">
-			{/* <Header /> */}
-			<Corner/>
+			<Header />
+			{/* <Corner/> */}
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />

@@ -17,7 +17,6 @@ class NewBlogs extends React.Component {
 	render() {
 		return (
 			<>
-				<h2>Blogs</h2>
 				<BlogList blogs={this.props.blogs} />
 				{/* {this.props.blogs.map((blog) => (
 					<div key={blog.title.rendered}>{blog.title.rendered}</div>

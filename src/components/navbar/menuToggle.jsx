@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 const Button = styled.div`
   margin-top: 0.5rem;
+  margin-left:0.5rem;
   z-index: 99;
   cursor: pointer;
   color: #2E1114;

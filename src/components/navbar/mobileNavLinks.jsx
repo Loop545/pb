@@ -16,7 +16,6 @@ const MobileNavLinks = (props) => {
 	const activeStyle = { color: '#F1342A' };
 	return (
 		<div className="nav-container">
-			<h1>Menu</h1>
 			<MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
 			{isOpen && (
 				<nav>
