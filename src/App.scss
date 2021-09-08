@@ -1,10 +1,13 @@
 @import '../src/styles/index.scss';
 *,
 body,
-html {
+html, #root {
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
   font: $font_regular;
   overflow:visible;
 }
+ #root {
+   height: 100vh;
+ }

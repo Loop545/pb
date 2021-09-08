@@ -1,0 +1,22 @@
+@import '../../styles/index.scss';
+
+.blog-all{
+    height: 85vh;
+
+    .bottom-container {
+        bottom: 0;
+    }
+}
+
+/* Blog List */
+
+.read-flex{
+    align-items: ba;
+}
+
+.excerpt {
+    margin-top: 1rem;
+    p {
+        font-size: 1.25rem;
+    }
+}

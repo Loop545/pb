@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+
+// Styles
 import './App.scss';
 
 // Pages
@@ -12,15 +14,14 @@ import Connect from './pages/Connect';
 import About from './pages/About';
 
 // Components
-import Footer from '../src/components/footer/footer';
 import Header from '../src/components/header/Header';
-import Corner from './components/navbar/cornerNav';
+
+
 
 const App = () => {
 	return (
 		<div className="app">
 			<Header />
-			{/* <Corner/> */}
 			<Switch>
 				<Route exact path="/" component={Home} />
 				<Route path="/about" component={About} />
@@ -32,7 +33,6 @@ const App = () => {
 				<Route path="/poempage/:id" component={poemAll} />
 				<Route path="/poempage" component={poemAll} />
 			</Switch>
-			{/* <Footer /> */}
 		</div>
 	);
 };

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as poemActions from '../../redux/actions/poemActions';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
-import PoemList from './PoemList';
+import PoemList from './PoemList.jsx';
 
 class NewPoems extends React.Component {
 	componentDidMount() {
