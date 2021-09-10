@@ -12,7 +12,7 @@ function PoemAll(props) {
 			setPoems(poemData);
 		};
 		fetchPoems();
-	}, []);
+	}, [props.match.params.id]);
 
 	return (
 		<div className="container block mx-auto px-24">

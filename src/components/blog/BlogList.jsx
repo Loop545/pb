@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-// Assest
-import { AiFillCaretRight } from 'react-icons/ai';
-
 // Styles
 import './blog.scss';
 
@@ -14,7 +11,7 @@ const BlogList = ({ blogs }) => (
 				return (
 					<div class="flex justify-center flex-col p-6 mt-12 shadow-lg border-1 rounded-lg">
 						<div class="flex justify-center md:justify-end -mt-16">
-							<img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"/>
+							<img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500" src="https://images.unsplash.com/photo-1499714608240-22fc6ad53fb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt='img'/>
 						</div>
 						<div className='inline-block mb-2'>
 							<h1 className=' title mb-1 text-gray-800 text-3xl font-semibold'>

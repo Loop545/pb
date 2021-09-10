@@ -19,7 +19,7 @@ function BlogAll(props) {
 			setBlogs(blogData);
 		};
 		fetchBlogs();
-	}, []);
+	}, [props.match.params.id]);
 
 	return (
 		<div className="blog-all md:container block mx-auto mt-20 p-24 shadow-lg border-1 rounded-lg">
