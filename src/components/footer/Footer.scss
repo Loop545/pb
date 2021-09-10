@@ -1,12 +1,11 @@
 @import '../../styles/index.scss';
 
 .footer-container {
-    position: relative;
     width: 100%;
     padding: 2rem;
     justify-content: center;
     align-items: center;
-    background-color: $dark_blue;
+    background-color: $black;
     color: $white;
 }
 .footer-container .legal {

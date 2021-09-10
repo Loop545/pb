@@ -18,7 +18,7 @@ const About = () => {
 					<h1 className="text-3xl uppercase">Jun Santilla</h1>
 					<p className="font-semibold mb-5">Web Developer</p>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-					<button className="bg-black rounded-md py-3 px-7 mt-6 text-white">Email Me</button>
+					<a className="bg-black rounded-md py-3 px-7 mt-6 text-white" href='mailto:pap.bhandari409@gmail.com' target='#'>Email Me</a>
 				</div>
 				</div>
 				</div>

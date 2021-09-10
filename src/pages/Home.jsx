@@ -2,7 +2,6 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 import './Home.scss';
 
-
 const Home = () => {
 	return (
 		<div className="main-container">

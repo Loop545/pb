@@ -17,7 +17,6 @@ class NewPoems extends React.Component {
 	render() {
 		return (
 			<>
-				<h2>Poems</h2>
 				<PoemList poems={this.props.poems} />
 				{/* {this.props.poems.map((blog) => (
 					<div key={blog.title.rendered}>{blog.title.rendered}</div>
