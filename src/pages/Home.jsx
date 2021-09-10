@@ -2,9 +2,13 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 import './Home.scss';
 
+// Component
+import Partical from '../components/partical';
+
 const Home = () => {
 	return (
 		<div className="main-container">
+			<Partical />
 			<section className="header">
 				<div className="one">
 					<h2>Hi, I am </h2>
