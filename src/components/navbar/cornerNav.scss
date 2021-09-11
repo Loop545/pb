@@ -7,7 +7,8 @@
 .corner {
 	padding: 17px 20px;
 	position: fixed;
-    color: red;
+	z-index: 3;
+    color: rgb(130, 119, 119);
 }
 .topleft {
 	left: 0;
@@ -41,9 +42,12 @@ li {
 	padding-left: 17px;
 	transition: opacity 1s;
 	-webkit-transition: opacity 1s;
-    color: red;
+    color: rgb(130, 119, 119);
     font: $font_bold;
     font-size: 1rem;
+	:hover {
+		font-size: 1.35rem;
+	}
 }
 .active {
 	padding-left: 0;
@@ -70,6 +74,9 @@ a {
 	color: inherit;
     font: $font_bold;
     font-size: 1rem;
+	&:hover {
+		font-size: 1.35rem;
+	}
 }
 .hidden {
 	//opacity: 0;
@@ -85,6 +92,6 @@ a {
 }
 a.active {
 	&:hover {
-		opacity: 0.5;
+		font-size: 1.35rem;
 	}
 }

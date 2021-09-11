@@ -11,10 +11,10 @@ class Partical extends Component {
 							value: '#ffffff',
 						},
 						number: {
-							value: 400,
+							value: 300,
 							density: {
 								enable: true,
-								value_area: 1500,
+								value_area: 3000,
 							},
 						},
 						line_linked: {
@@ -24,10 +24,10 @@ class Partical extends Component {
 						move: {
 							direction: 'none',
 							enable: true,
-							speed: 4,
+							speed: 3,
 						},
 						size: {
-							value: 1,
+							value: 2,
 						},
 						opacity: {
 							anim: {
