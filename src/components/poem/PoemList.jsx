@@ -17,7 +17,7 @@ const PoemList = ({ poems }) => (
 			<h1 id="title">Poems</h1>
 			<p> Here you will find the imaginery world that I build.</p>
 			<Link smooth to={'#list'}>
-				<a className="downarrow"></a>
+				<div className="downarrow"></div>
 			</Link>
 		</div>
 		<div
