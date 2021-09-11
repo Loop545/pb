@@ -12,7 +12,7 @@ import './poem.scss';
 import Image from '../../static/img/about.jpg';
 
 const PoemList = ({ poems }) => (
-	<div className="list-container">
+	<div className="list-poem-container">
 		<div className="list-header">
 			<h1 id="title">Poems</h1>
 			<p> Here you will find the imaginery world that I build.</p>
