@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 // Component
 import Footer from '../footer/footer';
@@ -16,9 +16,14 @@ const BlogList = ({ blogs }) => (
 		<div className="list-header">
 			<h1 id="title">Blogs</h1>
 			<p> Here you will find the imaginery world that I build.</p>
-			<div className="downarrow" />
+			<Link smooth to={'#list'}>
+				<a className="downarrow"></a>
+			</Link>
 		</div>
-		<div className="blog-list container mx-auto mt-20 mb-20 p-10 bg-white">
+		<div
+			className="blog-list container mx-auto mt-20 mb-20 p-10 bg-white"
+			id="list"
+		>
 			{blogs.map((blog) => {
 				return (
 					<div class="card flex justify-center flex-col p-6 mt-12 shadow-lg border-1 rounded-lg">
