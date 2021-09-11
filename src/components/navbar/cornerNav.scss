@@ -42,10 +42,14 @@ li {
 	padding-left: 17px;
 	transition: opacity 1s;
 	-webkit-transition: opacity 1s;
+	-webkit-transition: font-size .5s ease;
+	-moz-transition: font-size .5s ease;
+	-o-transition: font-size .5s ease;
+	transition: font-size .5s ease;
     color: rgb(130, 119, 119);
     font: $font_bold;
     font-size: 1rem;
-	:hover {
+	&:hover {
 		font-size: 1.35rem;
 	}
 }
@@ -69,6 +73,10 @@ ul.hidden {
 a {
 	transition: opacity 1s;
 	-webkit-transition: opacity 1s;
+	-webkit-transition: font-size .5s ease;
+	-moz-transition: font-size .5s ease;
+	-o-transition: font-size .5s ease;
+	transition: font-size .5s ease;
 	cursor: pointer;
 	text-decoration: none;
 	color: inherit;
