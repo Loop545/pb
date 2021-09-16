@@ -1,5 +1,5 @@
 import { handleResponse, handleError } from './apiUtils';
-const baseUrl = 'http://localhost:7000//wp-json/wp/v2/blog';
+const baseUrl = 'http://localhost/pb/wp-json/wp/v2/blog';
 
 export function getblogs() {
 	return fetch(baseUrl).then(handleResponse).catch(handleError);

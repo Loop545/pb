@@ -13,7 +13,7 @@ function PoemAll(props) {
 	useEffect(() => {
 		const fetchPoems = async () => {
 			const response = await fetch(
-				`http://localhost:7000/wp-json/wp/v2/poems/` + props.match.params.id,
+				`http://localhost/pb/wp-json/wp/v2/poem/` + props.match.params.id,
 			);
 			const poemData = await response.json({});
 			setPoems(poemData);

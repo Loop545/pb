@@ -13,7 +13,7 @@ function BlogAll(props) {
 	useEffect(() => {
 		const fetchBlogs = async () => {
 			const response = await fetch(
-				`http://localhost:7000/wp-json/wp/v2/blog/` + props.match.params.id,
+				`http://localhost/pb/wp-json/wp/v2/blog/` + props.match.params.id,
 			);
 			const blogData = await response.json({});
 			setBlogs(blogData);

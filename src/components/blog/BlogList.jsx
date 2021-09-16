@@ -44,7 +44,7 @@ const BlogList = ({ blogs }) => (
 							/>
 						</div>
 						<div className="read-flex flex justify-between mt-1">
-							<h3 className=""> Author: {blog.acf.author}</h3>
+							<h3 className=""> Author: {blog.acf.author_}</h3>
 							<label
 								className="inline-block rounded-full text-white 
 								bg-green-400 text-xs font-bold 
